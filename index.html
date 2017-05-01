@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--DIST-->
+        <link href="./dist/styles.css" rel="stylesheet">
+    </head>
+    <body ng-controller="mainCtrl">
+        <!--*************************-->
+        {{test}}
+        <!--*************************-->
+
+
+        <ui-view></ui-view>
+
+    <!--ANGULAR-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <!--DIST-->
+    <script src="./dist/js/bundle.js"></script>
+    </body>
+</html>
