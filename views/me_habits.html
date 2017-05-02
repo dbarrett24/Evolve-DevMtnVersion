@@ -1,14 +1,141 @@
 <h1>Habits</h1>
 
-<div class="col-md-4">
+<div class="col-md-6">
   <div class="card">
       <div class="card-header">
           <h4 class="card-title">Habits</h4>
           <p class="category">Consecutive days the habit was completed.</p>
       </div>
       <div class="card-content">
-            The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...
+            <habit-creator-dir></habit-creator-dir>
+            
+
       </div>
       
   </div>
+</div>
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header card-header-icon" data-background-color="blue">
+            <i class="material-icons">timeline</i>
+        </div>
+        <div class="card-content">
+            <h4 class="card-title">Coloured Line Chart
+                <small> - Rounded</small>
+            </h4>
+        </div>
+        <div id="colouredRoundedLineChart" class="ct-chart">
+            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="300px" class="ct-chart-line" style="width: 100%; height: 300px;">
+                <g class="ct-grids">
+                    <line y1="265" y2="265" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="240" y2="240" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="215" y2="215" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="190" y2="190" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="165" y2="165" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="140" y2="140" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="115" y2="115" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="90" y2="90" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="65" y2="65" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="40" y2="40" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                    <line y1="15" y2="15" x1="50" x2="389" class="ct-grid ct-vertical"></line>
+                </g>
+                <g>
+                    <g class="ct-series ct-series-a">
+                        <path d="M 50 193.25 C 55.65 185.208 72.6 145.125 83.9 145 C 95.2 144.875 106.5 195.583 117.8 192.5 C 129.1 189.417 140.4 143.167 151.7 126.5 C 163 109.833 174.3 98.167 185.6 92.5 C 196.9 86.833 208.2 84.583 219.5 92.5 C 230.8 100.417 242.1 142.583 253.4 140 C 264.7 137.417 276 83.25 287.3 77 C 298.6 70.75 309.9 108.667 321.2 102.5 C 332.5 96.333 343.8 52.25 355.1 40 C 366.4 27.75 383.35 30.833 389 29"
+                            class="ct-line"></path>
+                        <line x1="50" y1="193.25" x2="50.01" y2="193.25" class="ct-point" value="287" opacity="1"></line>
+                        <line x1="83.9" y1="145" x2="83.91000000000001" y2="145" class="ct-point" value="480" opacity="1"></line>
+                        <line x1="117.8" y1="192.5" x2="117.81" y2="192.5" class="ct-point" value="290" opacity="1"></line>
+                        <line x1="151.7" y1="126.5" x2="151.70999999999998" y2="126.5" class="ct-point" value="554"
+                            opacity="1"></line>
+                        <line x1="185.6" y1="92.5" x2="185.60999999999999" y2="92.5" class="ct-point" value="690"
+                            opacity="1"></line>
+                        <line x1="219.5" y1="92.5" x2="219.51" y2="92.5" class="ct-point" value="690" opacity="1"></line>
+                        <line x1="253.39999999999998" y1="140" x2="253.40999999999997" y2="140" class="ct-point" value="500"
+                            opacity="1"></line>
+                        <line x1="287.29999999999995" y1="77" x2="287.30999999999995" y2="77" class="ct-point" value="752"
+                            opacity="1"></line>
+                        <line x1="321.2" y1="102.5" x2="321.21" y2="102.5" class="ct-point" value="650" opacity="1"></line>
+                        <line x1="355.09999999999997" y1="40" x2="355.10999999999996" y2="40" class="ct-point" value="900"
+                            opacity="1"></line>
+                        <line x1="389" y1="29" x2="389.01" y2="29" class="ct-point" value="944" opacity="1"></line>
+                    </g>
+                </g>
+                <g class="ct-labels">
+                    <foreignObject style="overflow: visible;" x="50" y="270" width="33.9" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px" xmlns="http://www.w3.org/1999/xhtml">'06</span></foreignObject>
+                    <foreignObject
+                        style="overflow: visible;" x="83.9" y="270" width="33.9" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px" xmlns="http://www.w3.org/1999/xhtml">'07</span></foreignObject>
+                        <foreignObject
+                            style="overflow: visible;" x="117.8" y="270" width="33.89999999999999" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px" xmlns="http://www.w3.org/1999/xhtml">'08</span></foreignObject>
+                            <foreignObject
+                                style="overflow: visible;" x="151.7" y="270" width="33.900000000000006" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px" xmlns="http://www.w3.org/1999/xhtml">'09</span></foreignObject>
+                                <foreignObject
+                                    style="overflow: visible;" x="185.6" y="270" width="33.900000000000006" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px" xmlns="http://www.w3.org/1999/xhtml">'10</span></foreignObject>
+                                    <foreignObject
+                                        style="overflow: visible;" x="219.5" y="270" width="33.89999999999998" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px" xmlns="http://www.w3.org/1999/xhtml">'11</span></foreignObject>
+                                        <foreignObject
+                                            style="overflow: visible;" x="253.39999999999998" y="270" width="33.900000000000006"
+                                            height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px" xmlns="http://www.w3.org/1999/xhtml">'12</span></foreignObject>
+                                            <foreignObject
+                                                style="overflow: visible;" x="287.29999999999995" y="270" width="33.900000000000006"
+                                                height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px"
+                                                    xmlns="http://www.w3.org/1999/xhtml">'13</span></foreignObject>
+                                                <foreignObject
+                                                    style="overflow: visible;" x="321.2" y="270" width="33.89999999999998" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px"
+                                                        xmlns="http://www.w3.org/1999/xhtml">'14</span></foreignObject>
+                                                    <foreignObject
+                                                        style="overflow: visible;" x="355.09999999999997" y="270" width="33.900000000000034"
+                                                        height="20"><span class="ct-label ct-horizontal ct-end" style="width: 34px; height: 20px"
+                                                            xmlns="http://www.w3.org/1999/xhtml">'15</span></foreignObject>
+                                                        <foreignObject
+                                                            style="overflow: visible;" y="240" x="10" height="25" width="30"><span class="ct-label ct-vertical ct-start" style="height: 25px; width: 30px"
+                                                                xmlns="http://www.w3.org/1999/xhtml">0</span></foreignObject>
+                                                            <foreignObject
+                                                                style="overflow: visible;" y="215" x="10" height="25" width="30"><span class="ct-label ct-vertical ct-start" style="height: 25px; width: 30px"
+                                                                    xmlns="http://www.w3.org/1999/xhtml">100</span></foreignObject>
+                                                                <foreignObject
+                                                                    style="overflow: visible;" y="190" x="10" height="25" width="30"><span class="ct-label ct-vertical ct-start" style="height: 25px; width: 30px"
+                                                                        xmlns="http://www.w3.org/1999/xhtml">200</span></foreignObject>
+                                                                    <foreignObject
+                                                                        style="overflow: visible;" y="165" x="10" height="25"
+                                                                        width="30"><span class="ct-label ct-vertical ct-start" style="height: 25px; width: 30px"
+                                                                            xmlns="http://www.w3.org/1999/xhtml">300</span></foreignObject>
+                                                                        <foreignObject
+                                                                            style="overflow: visible;" y="140" x="10" height="25"
+                                                                            width="30"><span class="ct-label ct-vertical ct-start" style="height: 25px; width: 30px"
+                                                                                xmlns="http://www.w3.org/1999/xhtml">400</span></foreignObject>
+                                                                            <foreignObject
+                                                                                style="overflow: visible;" y="115" x="10" height="25"
+                                                                                width="30"><span class="ct-label ct-vertical ct-start" style="height: 25px; width: 30px"
+                                                                                    xmlns="http://www.w3.org/1999/xhtml">500</span></foreignObject>
+                                                                                <foreignObject
+                                                                                    style="overflow: visible;" y="90" x="10"
+                                                                                    height="25" width="30"><span class="ct-label ct-vertical ct-start"
+                                                                                        style="height: 25px; width: 30px" xmlns="http://www.w3.org/1999/xhtml">600</span></foreignObject>
+                                                                                    <foreignObject
+                                                                                        style="overflow: visible;" y="65" x="10"
+                                                                                        height="25" width="30"><span class="ct-label ct-vertical ct-start"
+                                                                                            style="height: 25px; width: 30px"
+                                                                                            xmlns="http://www.w3.org/1999/xhtml">700</span></foreignObject>
+                                                                                        <foreignObject
+                                                                                            style="overflow: visible;" y="40"
+                                                                                            x="10" height="25" width="30"><span class="ct-label ct-vertical ct-start"
+                                                                                                style="height: 25px; width: 30px"
+                                                                                                xmlns="http://www.w3.org/1999/xhtml">800</span></foreignObject>
+                                                                                            <foreignObject
+                                                                                                style="overflow: visible;" y="15"
+                                                                                                x="10" height="25" width="30"><span class="ct-label ct-vertical ct-start"
+                                                                                                    style="height: 25px; width: 30px"
+                                                                                                    xmlns="http://www.w3.org/1999/xhtml">900</span></foreignObject>
+                                                                                                <foreignObject
+                                                                                                    style="overflow: visible;"
+                                                                                                    y="-15" x="10" height="30"
+                                                                                                    width="30"><span class="ct-label ct-vertical ct-start"
+                                                                                                        style="height: 30px; width: 30px"
+                                                                                                        xmlns="http://www.w3.org/1999/xhtml">1000</span></foreignObject>
+                </g>
+            </svg>
+        </div>
+    </div>
 </div>

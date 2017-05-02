@@ -26,6 +26,14 @@ angular.module('app').directive('footerDir', function () {
 });
 'use strict';
 
+angular.module('app').directive('habitCreatorDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: './views/directives/habitCreatorDir.html'
+    };
+});
+'use strict';
+
 angular.module('app').directive('sidebarDir', function () {
     return {
         restrict: 'E',
