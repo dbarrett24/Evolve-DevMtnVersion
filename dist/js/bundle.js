@@ -18,6 +18,13 @@ angular.module('app').controller('mainCtrl', function ($scope, mainService) {
 });
 'use strict';
 
+angular.module('app').service('mainService', function ($http) {
+    // *****************************
+    this.test = "Controller & Service are working";
+    // *****************************
+});
+'use strict';
+
 angular.module('app').directive('footerDir', function () {
     return {
         restrict: 'E',
@@ -47,12 +54,5 @@ angular.module('app').directive('topNavDir', function () {
         restrict: 'E',
         templateUrl: './views/directives/topNavDir.html'
     };
-});
-'use strict';
-
-angular.module('app').service('mainService', function ($http) {
-    // *****************************
-    this.test = "Controller & Service are working";
-    // *****************************
 });
 //# sourceMappingURL=bundle.js.map
