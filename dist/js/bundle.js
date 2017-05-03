@@ -41,6 +41,14 @@ angular.module('app').directive('habitCreatorDir', function () {
 });
 'use strict';
 
+angular.module('app').directive('newHabitModal', function () {
+    return {
+        restrict: "AE",
+        templateUrl: '../views/directives/newHabitModal.html'
+    };
+});
+'use strict';
+
 angular.module('app').directive('sidebarDir', function () {
     return {
         restrict: 'E',

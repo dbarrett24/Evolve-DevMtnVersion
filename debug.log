@@ -4,3 +4,9 @@
 [0502/234608.221:ERROR:exception_snapshot_win.cc(87)] thread ID 6708 not found in process
 [0502/234608.221:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
 [0502/234608.221:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)
+[0503/105835.502:ERROR:process_info.cc(343)] VirtualQueryEx: Access is denied. (0x5)
+[0503/105835.505:ERROR:process_info.cc(564)] ReadMemoryInfo failed
+[0503/105835.511:ERROR:process_reader_win.cc(99)] process 9236 not found
+[0503/105835.511:ERROR:exception_snapshot_win.cc(87)] thread ID 12124 not found in process
+[0503/105835.511:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0503/105835.512:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)
