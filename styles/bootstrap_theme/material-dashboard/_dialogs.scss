@@ -16,15 +16,24 @@
         display: inline-block;
         width: 75%;
         height: 100%;
+        padding-right: 20px;
     }
     .modal-content-right{
-        // float: right;
+        padding-left: 20px;
         background-color: #F0F5F7;
         width: 25%;
-        
+
+        .modal-sidebar-row{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
         
     }
   .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: none;
     padding-top:    24px;
     padding-right:  24px;
@@ -49,7 +58,7 @@
   // Footer (for actions)
   .modal-footer {
     border-top: none;
-
+    
     &.text-center{
         text-align: center;
     }
@@ -79,7 +88,6 @@
 }
 
 .modal{
-    
     .modal-dialog{
         margin-top: 100px;
     }
