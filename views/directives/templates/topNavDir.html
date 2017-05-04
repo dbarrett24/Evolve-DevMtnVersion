@@ -12,10 +12,18 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                        </button>
-                    <a class="navbar-brand" href="#"> Breadcrumbs / Me / Dashboard </a>
-                </div>
+                    </button>
 
+
+                    <ol class="breadcrumb navbar-brand" style="margin-left: 15px">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Me</a></li>
+                        <li class="active">{{location}}</li>
+                    </ol>
+
+
+                    <!--<a class="navbar-brand" href="#"> Breadcrumbs / Me / Dashboard </a>-->
+                </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -58,15 +66,9 @@
                             </a>
                         </li>
                         <li class="separator hidden-lg hidden-md"></li>
-
                         <li class="navbar-form navbar-right ng-pristine ng-valid">
-                           
-                                    
                                 <img class="user-circle" src="../assets/img/faces/dave.jpeg" />
-                        
-                           
                         </li>
-                        
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
                         <div class="form-group form-search is-empty">

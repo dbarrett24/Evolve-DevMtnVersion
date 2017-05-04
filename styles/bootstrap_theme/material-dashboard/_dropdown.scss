@@ -75,7 +75,10 @@
     @include transform-translate-y(-20px);
     visibility: hidden;
     display: block;
+    height: auto !important;
+    overflow: visible !important;
     @include opacity(0);
+
 }
 
 .btn-group.bootstrap-select.open .dropdown-menu,
@@ -85,6 +88,7 @@
 .timeline .dropdown.open .dropdown-menu{
     @include opacity(1);
     visibility: visible;
+
     @include transform-translate-y(1px);
 
 }

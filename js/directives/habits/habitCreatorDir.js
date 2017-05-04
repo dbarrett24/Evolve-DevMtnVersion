@@ -1,6 +1,6 @@
 angular.module('app').directive('habitCreatorDir', function(){
     return{
         restrict: 'E',
-        templateUrl: './views/directives/habitCreatorDir.html'
+        templateUrl: './views/directives/habits/habitCreatorDir.html'
     }
 });

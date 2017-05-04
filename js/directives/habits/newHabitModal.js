@@ -1,6 +1,6 @@
 angular.module('app').directive('newHabitModal', function(){
     return{
         restrict: "AE",
-        templateUrl: '../views/directives/newHabitModal.html'
+        templateUrl: '../views/directives/habits/newHabitModal.html'
     }
-})
+});

@@ -3,13 +3,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Create New Habit</h4>
-                <ul class="color-choices">
-                    <li data-color="#2ecc71"></li>
-                    <li data-color="#D64A4B"></li>
-                    <li data-color="#8e44ad"></li>
-                    <li class="active-color" data-color="#46a1de"></li>
-                    <li data-color="#bdc3c7"></li>
-                </ul>
+                <color-picker></color-picker>
+                
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 30px">&times;</button>
             </div>
             <hr style="margin-bottom: 0">
@@ -30,9 +25,7 @@
                             </div>
 
                             <div class="form-group col-md-6" style="padding-bottom: 35px">
-                                <label class="label-control">Remind me:</label>
-                                <input type="text" class="form-control timepicker" value="8:00">
-                                <span class="material-input"></span>
+                                <time-picker time-picker-title="Remind me:"></time-picker>
                             </div>
 
                             <div class="pull-right" style="padding-bottom: 15px">
@@ -66,26 +59,16 @@
                                 <svg class="maxw-100% icon-info text-gray" viewBox="0 0 26 26" style="height:26px; width:26px;"><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-483 -669)"><g transform="translate(0 17)"><g transform="translate(460 54)"><g transform="translate(0 579)"><g transform="translate(20 16)"><path d="M0 0H32V32H0z"></path><circle cx="16" cy="16" r="12.5" stroke="currentColor" kr=""></circle><circle cx="16" cy="11" r="1" fill="currentColor" kr=""></circle><rect width="2" height="8" x="15" y="14" fill="currentColor" rx="1"></rect></g></g></g></g></g></g></svg>
 
                                 <p class="text-gray" style="padding-left: 10px; margin: 0px">Info</p>
-                                
                               
                                 <div class="modal-sidebar-row">
     
                                     <p class="text-muted" style="font-size: 68%; margin: 10px 0px 0px 8px"> <svg class="maxw-100% icon-star1" viewBox="0 0 9 9" style="height:9px; width:9px"><g fill="#8A9499" fill-rule="evenodd"><path d="M4.2798 6.839L1.6347 8.23 2.1399 5.285 4.2633e-14 3.199 2.9572 2.769 4.2798 0.089 5.6023 2.769 8.5595 3.199 6.4196 5.285 6.9248 8.23z"></path></g></svg> May 7, 2017, 9:28</p>
                                     
                                 </div>
-
-
                             </div>
-
                         </div>
                     </div>
-
             </div>
-
-            
-
-
-
 
             <!--<div class="modal-footer">
             </div>-->

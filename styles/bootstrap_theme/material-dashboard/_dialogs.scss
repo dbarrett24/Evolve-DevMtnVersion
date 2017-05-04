@@ -8,7 +8,7 @@
   @include shadow-z-5();
   border-radius: $border-radius-large;
   border: none;
-  overflow: hidden;
+  overflow: visible;
   // Modal header
   // Top section of the modal w/ title and dismiss
 
@@ -22,6 +22,7 @@
         padding-left: 20px;
         background-color: #F0F5F7;
         width: 25%;
+        border-bottom-right-radius: $border-radius-large;
 
         .modal-sidebar-row{
             display: flex;
@@ -98,7 +99,6 @@
         &:focus{
             opacity: 1;
         }
-
         i{
             font-size: 16px;
         }

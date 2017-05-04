@@ -12742,7 +12742,7 @@ form .form-footer .checkbox {
     width: 0;
     height: 0;
     background: red;
-    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
     animation: checkbox-off 0.3s forwards; }
 
 .checkbox input[type=checkbox]:focus + .checkbox-material .check:after {
@@ -12753,7 +12753,7 @@ form .form-footer .checkbox {
 
 .checkbox input[type=checkbox]:checked + .checkbox-material .check:before {
   color: #FFFFFF;
-  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
   animation: checkbox-on 0.3s forwards; }
 
 .checkbox input[type=checkbox]:checked + .checkbox-material:before {
@@ -12784,11 +12784,11 @@ fieldset[disabled] .checkbox input[type=checkbox],
 
 @keyframes checkbox-on {
   0% {
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px; }
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px; }
   50% {
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px; }
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px; }
   100% {
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px; } }
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px; } }
 
 @keyframes rippleOn {
   0% {
@@ -13685,7 +13685,7 @@ fieldset[disabled] .checkbox input[type=checkbox],
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
   border-radius: 6px;
   border: none;
-  overflow: hidden; }
+  overflow: visible; }
   .modal-content .modal-content-left {
     display: inline-block;
     width: 75%;
@@ -13694,7 +13694,8 @@ fieldset[disabled] .checkbox input[type=checkbox],
   .modal-content .modal-content-right {
     padding-left: 20px;
     background-color: #F0F5F7;
-    width: 25%; }
+    width: 25%;
+    border-bottom-right-radius: 6px; }
     .modal-content .modal-content-right .modal-sidebar-row {
       display: flex;
       align-items: center;
@@ -14316,6 +14317,8 @@ footer {
   transform: translate3d(0, -20px, 0);
   visibility: hidden;
   display: block;
+  height: auto !important;
+  overflow: visible !important;
   opacity: 0;
   filter: alpha(opacity=0); }
 
@@ -15418,6 +15421,7 @@ footer {
 @media all and (max-width: 490px) {
   .nav-center .nav-pills-icons {
     max-width: 211px; } }
+
 
 
 .color-choices {
