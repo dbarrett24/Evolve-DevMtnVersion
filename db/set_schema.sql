@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS users, habits, days_completed;
 
 -- users
 CREATE TABLE users (
@@ -20,16 +19,37 @@ CREATE TABLE habits (
     title VARCHAR(255),
     color VARCHAR(255),
     currentStreak VARCHAR(255),
-    date_created VARCHAR(255),
+    date_created DATETIME,
     frequency VARCHAR(255),
     momentum INTEGER,
-    reminder_time VARCHAR(255)
+    reminder_time TIME
 );
 
 -- days_completed
 CREATE TABLE days_completed (
-    habit_id INTEGER,
-    user_id VARCHAR(255),
-    date_object VARCHAR(255),
+    id SERIAL PRIMARY KEY,
+    habit_id INTEGER REFERENCES habits(id),
+    user_id INTEGER REFERENCES users(id),
+    date_object DATETIME,
     journal_entry VARCHAR(255)
+);
+-- streaks
+CREATE TABLE streaks (
+    id SERIAL PRIMARY KEY,
+    streak_start_date DATETIME,
+    streak_end_date DATETIME,
+    habit_id INTEGER REFERENCES habits(id),
+    user_id INTEGER REFERENCES users(id)
+);
+-- frequency
+CREATE TABLE frequency (
+    id SERIAL PRIMARY KEY,
+    habit_id INTEGER REFERENCES habits(id),
+    monday BOOLEAN,
+    tuesday BOOLEAN,
+    wednesday BOOLEAN,
+    thursday BOOLEAN,
+    friday BOOLEAN,
+    saturday BOOLEAN,
+    sunday BOOLEAN
 );
