@@ -10,8 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "babel-preset-es2015": "^6.24.0",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "del": "^2.2.2",
     "express": "^4.15.2",
+    "express-sessions": "^1.0.6",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cachebust": "0.0.6",
@@ -19,7 +22,8 @@
     "gulp-print": "^2.0.1",
     "gulp-sass": "^2.3.2",
     "gulp-scss": "^1.4.0",
-    "gulp-sourcemaps": "^2.5.1"
+    "gulp-sourcemaps": "^2.5.1",
+    "massive": "^2.6.0"
   },
   "description": ""
 }

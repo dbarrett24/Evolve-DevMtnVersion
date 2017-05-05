@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const session = require('express-session');
+const session = require('express-sessions');
 const massive = require('massive');
 
 const app = module.exports = express();
