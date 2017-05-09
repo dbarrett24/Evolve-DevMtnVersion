@@ -8,6 +8,7 @@ angular.module('app', ['ui.router'])
             .state('me/habits', {
                 url: '/me/habits',
                 templateUrl: '../views/me_habits.html'
+                // controller: 'habitsCtrl'
             })
 
             $urlRouterProvider.otherwise('/me/overview');

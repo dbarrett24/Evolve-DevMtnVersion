@@ -1,3 +1,5 @@
 INSERT INTO habits
-(title, color, date_created, time_created, momentum, reminder_time)
-VALUES ("Go to bed at 10pm", "blue", 12, 0, 3);
+(title, color, currentstreak, date_created, time_created, momentum, reminder_time, user_id)
+VALUES ($1, $2, 0, $3, $4, 0, $5, 1)
+RETURNING id;
+

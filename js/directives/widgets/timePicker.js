@@ -1,12 +1,18 @@
-angular.module('app').directive('timePicker', function(){
+angular.module('app').directive('timePicker', function(mainService){
     return{
         restrict: 'AE',
         templateUrl: './views/directives/widgets/timePicker.html',
         scope: {
             timePickerTitle: '@'
+            
         },
         link: function(scope, elem, attrs){
-            $(document).ready(function () {
+                $("#commit").on('click', function(){
+                    // mainService.reminderTime = scope.reminderTime;
+                    mainService.reminderTime = $('#reminder_time').val();
+                    // console.log(mainService.reminderTime)
+                })
+      
                 $('.timepicker').datetimepicker({
                     //          format: 'H:mm',    // use this format if you want the 24hours timepicker
                     format: 'h:mm A', //use this format if you want the 12hours timpiecker with AM/PM toggle
@@ -24,8 +30,12 @@ angular.module('app').directive('timePicker', function(){
 
                     }
                 });
-            });
+          
 
+        },
+        controller: function($scope, mainService, $interval){
+            
+          
         }
     }
 });

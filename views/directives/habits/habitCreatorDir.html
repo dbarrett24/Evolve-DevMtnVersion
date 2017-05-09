@@ -13,24 +13,24 @@
 
 
 
-        <div class="col-md-11">
+        <div class="col-md-11" ng-repeat="habit in habits">
 
             <!--HABITS-->
-            <div class="row" ng-repeat="habit in habits">
+            <div class="row">
                 <div class="col-md-11">
                     <div>
-                        <p class="text-muted" style="display: inline-block">Habit 1</p>
-                        <button class="btn btn-round btn-simple btn-fab btn-fab-mini" data-toggle="modal" data-target="#myModal" style="height: 30px; min-width: 32px"><i class="material-icons text-gray align-middle" style="font-size: 12px">settings</i></button>
+                        <p class="text-muted" style="display: inline-block">{{habit.title}}</p>
+                        <button class="btn btn-round btn-simple btn-fab btn-fab-mini" data-toggle="modal" data-target="#editHabitModal" style="height: 30px; min-width: 32px"><i class="material-icons text-gray align-middle" style="font-size: 12px">settings</i></button>
                     </div>
                     <div class="progress progress-line-primary progress-height">
                         <div class="progress-bar bg-color" role="progressbar" aria-valuenow="15" aria-valuemin="0"aria-valuemax="20" style="width: 30%">
-                            <span class="sr-only">60% Complete</span>
+                            <span class="sr-only">30% Complete</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-1">
-                    <button class="btn btn-round btn-rose btn-just-icon" style="font-size:16px">15</button>
+                    <button class="btn btn-round btn-rose btn-just-icon" style="font-size:16px">{{habit.currentstreak}}</button>
                 </div>
             </div>
             <hr>

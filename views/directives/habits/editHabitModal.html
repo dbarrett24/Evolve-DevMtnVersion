@@ -1,8 +1,8 @@
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="editHabitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Create New Habit</h4>
+                <h4 class="modal-title" id="myModalLabel">Edit Habit</h4>
                 <color-picker></color-picker>
                 
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 30px">&times;</button>
@@ -69,9 +69,9 @@
                                 <time-picker time-picker-title="Remind me:" ></time-picker>
                             </div>
 
-                            <div class="pull-right" style="padding-bottom: 15px">
+                            <div class="pull-right" style="padding-bottom: 15px; padding-left: 14px">
                                 <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
-                                <button type="button" ng-click="newHabit(newhabit, newHabitFrequency)" class="btn btn-info btn-primary bg-color" id="commit">Commit!</button>
+                                <button type="button" ng-click="newHabit(newhabit, newHabitFrequency)" class="btn btn-info btn-primary bg-color" id="commit">Save</button>
                             </div>
                         </div>
 
@@ -103,7 +103,7 @@
                               
                                 <div class="modal-sidebar-row">
     
-                                    <p class="text-muted" style="font-size: 68%; margin: 10px 0px 0px 8px" > <svg class="maxw-100% icon-star1" viewBox="0 0 9 9" style="height:9px; width:9px"><g fill="#8A9499" fill-rule="evenodd"><path d="M4.2798 6.839L1.6347 8.23 2.1399 5.285 4.2633e-14 3.199 2.9572 2.769 4.2798 0.089 5.6023 2.769 8.5595 3.199 6.4196 5.285 6.9248 8.23z"></path></g></svg> May 7, 2017, 9:28</p>
+                                    <p class="text-muted" style="font-size: 68%; margin: 10px 0px 0px 8px" ng-repeat="habit in habits"> <svg class="maxw-100% icon-star1" viewBox="0 0 9 9" style="height:9px; width:9px"><g fill="#8A9499" fill-rule="evenodd"><path d="M4.2798 6.839L1.6347 8.23 2.1399 5.285 4.2633e-14 3.199 2.9572 2.769 4.2798 0.089 5.6023 2.769 8.5595 3.199 6.4196 5.285 6.9248 8.23z"></path></g></svg> {{habit.date_created}}, {{habit.time_created}}</p>
                                     
                                 </div>
                             </div>

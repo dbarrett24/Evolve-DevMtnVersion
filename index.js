@@ -13,19 +13,21 @@ app.use(express.static(__dirname + '/dist'));
 
 //FILES and CUSTOM MIDDLEWARE
 const config = require('./config');
-const habitsCtrl = require('./server-controllers/habitsCtrl');
 
 //DATABASE
 const db = massive.connectSync({connectionString : config.elephantSQL});
 app.set('db', db);
+const habitsCtrl = require('./server-controllers/habitsCtrl');
 
-// db.set_schema(function(err, data){
-//     if(err)console.log(err);
-//     else console.log("All tables successfully reset");
-// });
+//RESETS ALL TABLES (**USE ONLY IN DEVELOPMENT**)
+db.set_schema(function(err, data){
+    if(err)console.log(err);
+    else console.log("All tables successfully reset");
+});
 
 //ENDPOINTS
 app.post('/api/createHabit', habitsCtrl.createHabit);
+app.get('/api/getHabits', habitsCtrl.getHabits);
 
 
 app.listen(config.port, function(){

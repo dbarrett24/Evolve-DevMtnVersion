@@ -19,18 +19,59 @@
                             <div class="col-md-10">
                                 <h3>I will</h3>
                                 <div class="form-group">
-                                    <input type="text" value="" placeholder="Ex. Code for an hour" class="form-control" />
+                                    <input type="text" value="" placeholder="Ex. Code for an hour" class="form-control" ng-model="newhabit.title"/>
                                 </div>
-                                <h3 class="text-color" style="margin-top: 5px">everyday</h3>
+                                <div class="dropdown">
+                                    <h3 class="text-color" data-toggle="dropdown" style="margin-top: 5px">everyday</h3>
+
+                                    <ul class="dropdown-menu" style="padding-left: 20px; left: 44px">
+                                        <li class="checkbox">
+                                            <label><input type="checkbox" ng-model="newHabitFrequency.monday">
+                                            Monday
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label><input type="checkbox" ng-model="newHabitFrequency.tuesday">
+                                            Tuesday
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label><input type="checkbox" ng-model="newHabitFrequency.wednesday">
+                                            Wednesday
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label><input type="checkbox" ng-model="newHabitFrequency.thursday">
+                                            Thursday
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label><input type="checkbox" ng-model="newHabitFrequency.friday">
+                                            Friday
+                                            </label>
+                                        </li>
+                                        <li class="checkbox" checked>
+                                            <label><input type="checkbox" ng-model="newHabitFrequency.saturday">
+                                            Saturday
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label><input type="checkbox" ng-model="newHabitFrequency.sunday">
+                                            Sunday
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
 
                             <div class="form-group col-md-6" style="padding-bottom: 35px">
-                                <time-picker time-picker-title="Remind me:"></time-picker>
+                                <time-picker time-picker-title="Remind me:" ></time-picker>
                             </div>
 
                             <div class="pull-right" style="padding-bottom: 15px">
                                 <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-info btn-primary bg-color">Commit!</button>
+                                <button type="button" ng-click="newHabit(newhabit, newHabitFrequency)" class="btn btn-info btn-primary bg-color" id="commit">Commit!</button>
                             </div>
                         </div>
 
@@ -62,7 +103,7 @@
                               
                                 <div class="modal-sidebar-row">
     
-                                    <p class="text-muted" style="font-size: 68%; margin: 10px 0px 0px 8px"> <svg class="maxw-100% icon-star1" viewBox="0 0 9 9" style="height:9px; width:9px"><g fill="#8A9499" fill-rule="evenodd"><path d="M4.2798 6.839L1.6347 8.23 2.1399 5.285 4.2633e-14 3.199 2.9572 2.769 4.2798 0.089 5.6023 2.769 8.5595 3.199 6.4196 5.285 6.9248 8.23z"></path></g></svg> May 7, 2017, 9:28</p>
+                                    <p class="text-muted" style="font-size: 68%; margin: 10px 0px 0px 8px" > <svg class="maxw-100% icon-star1" viewBox="0 0 9 9" style="height:9px; width:9px"><g fill="#8A9499" fill-rule="evenodd"><path d="M4.2798 6.839L1.6347 8.23 2.1399 5.285 4.2633e-14 3.199 2.9572 2.769 4.2798 0.089 5.6023 2.769 8.5595 3.199 6.4196 5.285 6.9248 8.23z"></path></g></svg> May 7, 2017, 9:28</p>
                                     
                                 </div>
                             </div>
