@@ -28,6 +28,7 @@ db.set_schema(function(err, data){
 //ENDPOINTS
 app.post('/api/createHabit', habitsCtrl.createHabit);
 app.get('/api/getHabits', habitsCtrl.getHabits);
+app.put('/api/editHabit', habitsCtrl.editHabit);
 
 
 app.listen(config.port, function(){

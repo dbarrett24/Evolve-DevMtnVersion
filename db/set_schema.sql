@@ -20,10 +20,10 @@ CREATE TABLE habits (
     title VARCHAR(255),
     color VARCHAR(255),
     currentStreak VARCHAR(255),
-    date_created DATE,
-    time_created TIME,
+    date_created VARCHAR(255),
+    time_created VARCHAR(255),
     momentum INTEGER,
-    reminder_time TIME,
+    reminder_time VARCHAR(255),
     user_id INTEGER
 );
 

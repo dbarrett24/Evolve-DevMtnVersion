@@ -17,9 +17,7 @@ angular.module('app').service('mainService', function($http){
             return response.data;
         })
     }
-
-
-
+  
     this.newHabit = function(newHabit, newHabitFrequency){
         newHabit.color = this.selectedColor;
         newHabit.reminder_time = this.reminderTime;
@@ -32,6 +30,25 @@ angular.module('app').service('mainService', function($http){
             method: 'POST',
             url: '/api/createHabit',
             data: {newHabit, newHabitFrequency}
+        }).then(function(response){
+            // console.log(response);
+            // self.getHabits();
+            return response;
+        });
+    }
+
+    this.editHabit = function(Habit, HabitFrequency){
+        // Habit.color = this.editedColor;
+        // Habit.reminder_time = this.reminderTime;
+        // Habit.date_created = this.date.toLocaleDateString();
+        // Habit.time_created = this.date.toLocaleTimeString();
+        
+        console.log(newHabit, newHabitFrequency);
+
+        return $http({
+            method: 'PUT',
+            url: '/api/editHabit',
+            data: {Habit, HabitFrequency}
         }).then(function(response){
             // console.log(response);
             // self.getHabits();

@@ -38,9 +38,32 @@ module.exports = {
             if(err){
                 console.log(err)
             } else{
-                res.status(200).send("Product successfully deleted", deleted);
+                res.status(200).send(deleted);
             }
         })
+    },
+
+    editHabit: function(req, res, next){
+        let editHabit = req.body.Habit;
+        let editFrequency = req.body.HabitFrequency;
+        console.log(editHabit, editFrequency)
+        db.edit_habit([editHabit.title, editHabit.color, editHabit.reminder_time, editHabit.id],function(err, habit_id){
+            console.log(habit_id)
+            // res.status(200).send(habits);
+            if(err){
+                res.send(err);
+            } else{
+                
+                db.edit_habit_frequency([editFrequency.monday, editFrequency.tuesday, editFrequency.wednesday, editFrequency.thursday, editFrequency.friday, editFrequency.saturday, editFrequency.sunday, editFrequency.habit_id], function(err2, response){
+                    if(err2){
+                        res.send(err2);
+                    } else{
+                        res.status(200).send(response);
+                    }
+                })       
+            }
+        });
+
     }
 
 }

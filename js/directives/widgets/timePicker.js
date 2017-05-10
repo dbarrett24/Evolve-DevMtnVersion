@@ -3,11 +3,16 @@ angular.module('app').directive('timePicker', function(mainService){
         restrict: 'AE',
         templateUrl: './views/directives/widgets/timePicker.html',
         scope: {
-            timePickerTitle: '@'
-            
+            timePickerTitle: '@',
+            reminderTime: '='
         },
         link: function(scope, elem, attrs){
                 $("#commit").on('click', function(){
+                    // mainService.reminderTime = scope.reminderTime;
+                    mainService.reminderTime = $('#reminder_time').val();
+                    // console.log(mainService.reminderTime)
+                })
+                $("#save").on('click', function(){
                     // mainService.reminderTime = scope.reminderTime;
                     mainService.reminderTime = $('#reminder_time').val();
                     // console.log(mainService.reminderTime)
