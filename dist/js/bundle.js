@@ -43,10 +43,23 @@ angular.module('app').controller('mainCtrl', function ($scope, mainService, $loc
 		}, 150);
 	};
 	//Edit a Habit
-	$scope.editHabit = function (habit, HabitFrequency) {
+	$scope.editHabit = function (habit) {
+		var habit;
+		habit.title = $scope.title;
+		habit.reminder_time = $scope.reminder_time;
+		habit.monday = $scope.monday;
+		habit.tuesday = $scope.tuesday;
+		habit.wednesday = $scope.wednesday;
+		habit.thursday = $scope.thursday;
+		habit.friday = $scope.friday;
+		habit.saturday = $scope.saturday;
+		habit.sunday = $scope.sunday;
+		habit.color = $scope.color;
+		habit.date_created = $scope.date_created;
+		habit.time_created = $scope.time_created;
 		$timeout(function () {
 			console.log("Form-data before sent to service", habit);
-			mainService.editHabit(habit, HabitFrequency).then(function (response) {
+			mainService.editHabit(habit).then(function (response) {
 				mainService.getHabits().then(function (habits) {
 					$scope.habits = habits;
 					console.log("After getHabits() comes back with edits", $scope.habits);
