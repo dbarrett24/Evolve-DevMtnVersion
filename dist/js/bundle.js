@@ -28,10 +28,12 @@ angular.module('app').controller('mainCtrl', function ($scope, mainService, $loc
 
 	//get All Habits
 	$scope.getHabits = function () {
-		mainService.getHabits().then(function (habits) {
-			$scope.habits = habits;
-			console.log("After getHabits() comes back", $scope.habits);
-		});
+		$timeout(function () {
+			mainService.getHabits().then(function (habits) {
+				$scope.habits = habits;
+				console.log("After getHabits() comes back", $scope.habits);
+			});
+		}, 0);
 	};
 	$scope.getHabits();
 
@@ -117,6 +119,7 @@ angular.module('app').controller('mainCtrl', function ($scope, mainService, $loc
 		$scope.editedHabit.color = habit.color;
 		$scope.editedHabit.date_created = habit.date_created;
 		$scope.editedHabit.time_created = habit.time_created;
+		$scope.editedHabit.currentstreak = habit.currentstreak;
 		$scope.editedHabit.id = habit.id;
 		//Split to Frequency Table attributes
 		$scope.editFrequency.monday = habit.monday;
@@ -127,6 +130,11 @@ angular.module('app').controller('mainCtrl', function ($scope, mainService, $loc
 		$scope.editFrequency.saturday = habit.saturday;
 		$scope.editFrequency.sunday = habit.sunday;
 		$scope.editFrequency.habit_id = habit.habit_id;
+	};
+
+	$scope.checkIn = function (currentStreak) {
+		$scope.editedHabit.currentstreak = currentStreak;
+		$scope.editedHabit.currentstreak++;
 	};
 });
 'use strict';

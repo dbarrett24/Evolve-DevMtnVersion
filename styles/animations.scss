@@ -1,0 +1,49 @@
+
+.card{
+    transition-delay: 0.1s;
+}
+.card2{
+    transition-delay: 0.4s;
+}
+.card3{
+    transition-delay: 0.6s;
+}
+.card4{
+    transition-delay: 0.8s;
+}
+
+
+
+//FADE, STAGGER LOAD in From bottom
+.fade-in-bottom.ng-enter{
+    transition: 0.50s ease-out all;
+    opacity: 0;
+    transform: translateY(-50px);
+    
+}
+
+/*finishing styles*/
+.fade-in-bottom.ng-enter.ng-enter-active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.fade-in-bottom.ng-enter-stagger{
+    transition-delay: 0.1s;
+    transition-duration: 0s;
+}
+
+
+//LEAVE
+.fade-in-bottom.ng-leave{
+    transition: 0.50s ease-out all;
+    opacity: 1;
+    transform: translateY(0px);
+    
+}
+
+/*finishing styles*/
+.fade-in-bottom.ng-enter.ng-leave-active{
+    opacity: 0;
+    transform: translateY(50px);
+}

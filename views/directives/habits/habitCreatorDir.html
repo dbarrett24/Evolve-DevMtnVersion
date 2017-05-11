@@ -1,5 +1,5 @@
 
-<div class="card">
+<div class="card animated fadeInUp">
     <div class="card-header card-header-icon" data-background-color="blue">
         <i class="material-icons">timeline</i>
     </div>
@@ -13,7 +13,7 @@
 
 
 
-        <div class="col-md-11" ng-repeat="habit in habits">
+        <div class="col-md-11 fade-in-bottom" ng-repeat="habit in habits">
             <!--HABITS-->
             <div class="row">
                 <div class="col-md-11">
@@ -29,7 +29,7 @@
                 </div>
                 
                 <div class="col-md-1">
-                    <button class="btn btn-round btn-rose btn-just-icon" style="font-size:16px">{{habit.currentstreak}}</button>
+                    <button class="btn btn-round btn-rose btn-just-icon" style="font-size:16px" ng-click="checkIn(habit.currentstreak)">{{habit.currentstreak}}</button>
                 </div>
             </div>
             <hr>
