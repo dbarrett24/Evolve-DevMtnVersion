@@ -20,16 +20,16 @@ app.set('db', db);
 const habitsCtrl = require('./server-controllers/habitsCtrl');
 
 //RESETS ALL TABLES (**USE ONLY IN DEVELOPMENT**)
-db.set_schema(function(err, data){
-    if(err)console.log(err);
-    else console.log("All tables successfully reset");
-});
+// db.set_schema(function(err, data){
+//     if(err)console.log(err);
+//     else console.log("All tables successfully reset");
+// });
 
 //ENDPOINTS
-app.post('/api/createHabit', habitsCtrl.createHabit);
 app.get('/api/getHabits', habitsCtrl.getHabits);
+app.post('/api/createHabit', habitsCtrl.createHabit);
 app.put('/api/editHabit', habitsCtrl.editHabit);
-
+app.delete('/api/deleteHabit/:id', habitsCtrl.deleteHabit);
 
 app.listen(config.port, function(){
     console.log('listening on ', config.port);

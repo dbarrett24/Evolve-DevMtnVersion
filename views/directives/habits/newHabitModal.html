@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Create New Habit</h4>
-                <color-picker color-value="color"></color-picker>
+                <color-picker color-value="editedHabit.color"></color-picker>
                 
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 30px">&times;</button>
             </div>
@@ -22,7 +22,7 @@
                                     <input type="text" value="" placeholder="Ex. Code for an hour" class="form-control" ng-model="newhabit.title"/>
                                 </div>
                                 <div class="dropdown">
-                                    <h3 data-toggle="dropdown" style="margin-top: 5px" ng-style="{'color': color}">everyday</h3>
+                                    <h3 data-toggle="dropdown" style="margin-top: 5px" ng-style="{'color': editedHabit.color}">everyday</h3>
 
                                     <ul class="dropdown-menu" style="padding-left: 20px; left: 44px">
                                         <li class="checkbox">
@@ -71,7 +71,7 @@
 
                             <div class="pull-right" style="padding-bottom: 15px">
                                 <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
-                                <button type="button" data-dismiss="modal" ng-click="newHabit(newhabit, newHabitFrequency)" ng-style="{'background-color': color}" class="btn btn-info btn-primary" id="commit">Commit!</button>
+                                <button type="button" data-dismiss="modal" ng-click="newHabit(newhabit, newHabitFrequency)" ng-style="{'background-color': editedHabit.color}" class="btn btn-info btn-primary" id="commit">Commit!</button>
                             </div>
                         </div>
 

@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Edit Habit</h4><i class="material-icons text-gray align-left">settings</i>
-                <color-picker color-value="color"></color-picker>
+                <color-picker color-value="editedHabit.color"></color-picker>
 
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 30px">&times;</button>
             </div>
@@ -19,44 +19,44 @@
                             <div class="col-md-10">
                                 <h3>I will</h3>
                                 <div class="form-group">
-                                    <input type="text" value="" placeholder="Ex. Code for an hour" class="form-control" ng-model="title"/>
+                                    <input type="text" value="" placeholder="Ex. Code for an hour" class="form-control" ng-model="editedHabit.title"/>
                                 </div>
                                 <div class="dropdown">
-                                    <h3 data-toggle="dropdown" style="margin-top: 5px" ng-style="{'color': color}">everyday</h3>
+                                    <h3 data-toggle="dropdown" style="margin-top: 5px" ng-style="{'color': editedHabit.color}">everyday</h3>
 
                                     <ul class="dropdown-menu" style="padding-left: 20px; left: 44px">
                                         <li class="checkbox">
-                                            <label><input type="checkbox" ng-model="monday">
+                                            <label><input type="checkbox" ng-model="editFrequency.monday">
                                             Monday
                                             </label>
                                         </li>
                                         <li class="checkbox">
-                                            <label><input type="checkbox" ng-model="tuesday">
+                                            <label><input type="checkbox" ng-model="editFrequency.tuesday">
                                             Tuesday
                                             </label>
                                         </li>
                                         <li class="checkbox">
-                                            <label><input type="checkbox" ng-model="wednesday">
+                                            <label><input type="checkbox" ng-model="editFrequency.wednesday">
                                             Wednesday
                                             </label>
                                         </li>
                                         <li class="checkbox">
-                                            <label><input type="checkbox" ng-model="thursday">
+                                            <label><input type="checkbox" ng-model="editFrequency.thursday">
                                             Thursday
                                             </label>
                                         </li>
                                         <li class="checkbox">
-                                            <label><input type="checkbox" ng-model="friday">
+                                            <label><input type="checkbox" ng-model="editFrequency.friday">
                                             Friday
                                             </label>
                                         </li>
                                         <li class="checkbox" checked>
-                                            <label><input type="checkbox" ng-model="saturday">
+                                            <label><input type="checkbox" ng-model="editFrequency.saturday">
                                             Saturday
                                             </label>
                                         </li>
                                         <li class="checkbox">
-                                            <label><input type="checkbox" ng-model="sunday">
+                                            <label><input type="checkbox" ng-model="editFrequency.sunday">
                                             Sunday
                                             </label>
                                         </li>
@@ -66,12 +66,12 @@
                             </div>
 
                             <div class="form-group col-md-6" style="padding-bottom: 35px">
-                                <time-picker time-picker-title="Remind me:" reminder-time="reminder_time"></time-picker>
+                                <time-picker time-picker-title="Remind me:" reminder-time="editedHabit.reminder_time"></time-picker>
                             </div>
 
                             <div class="pull-right" style="padding-bottom: 15px; padding-left: 14px">
                                 <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
-                                <button type="button" data-dismiss="modal" ng-click="editHabit(habit)" ng-style="{'background-color': color}" class="btn btn-info btn-primary" id="save">Save</button>
+                                <button type="button" data-dismiss="modal" ng-click="editHabit(editedHabit, editFrequency)" ng-style="{'background-color': editedHabit.color}" class="btn btn-info btn-primary" id="save">Save</button>
                             </div>
                         </div>
 
@@ -103,10 +103,14 @@
                               
                                 <div class="modal-sidebar-row">
     
-                                    <p class="text-muted" style="font-size: 68%; margin: 10px 0px 0px 8px"> <svg class="maxw-100% icon-star1" viewBox="0 0 9 9" style="height:9px; width:9px"><g fill="#8A9499" fill-rule="evenodd"><path d="M4.2798 6.839L1.6347 8.23 2.1399 5.285 4.2633e-14 3.199 2.9572 2.769 4.2798 0.089 5.6023 2.769 8.5595 3.199 6.4196 5.285 6.9248 8.23z"></path></g></svg> {{date_created}}, {{time_created}}</p>
+                                    <p class="text-muted" style="font-size: 68%; margin: 10px 0px 0px 8px"> <svg class="maxw-100% icon-star1" viewBox="0 0 9 9" style="height:9px; width:9px"><g fill="#8A9499" fill-rule="evenodd"><path d="M4.2798 6.839L1.6347 8.23 2.1399 5.285 4.2633e-14 3.199 2.9572 2.769 4.2798 0.089 5.6023 2.769 8.5595 3.199 6.4196 5.285 6.9248 8.23z"></path></g></svg> {{editedHabit.date_created}}, {{editedHabit.time_created}}</p>
                                     
                                 </div>
+
                             </div>
+                                <div class="modal-sidebar-row">
+                                    <button type="button" class="btn btn-simple pull-right" data-dismiss="modal" aria-hidden="true" style="font-size: 12px" ng-click="deleteVerify(editedHabit.id)"><i class="material-icons text-gray" style="font-size: 30px; margin-top: 110px">delete</i></button>
+                                </div>
                         </div>
                     </div>
             </div>

@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ngAnimate'])
     .config(function($stateProvider, $urlRouterProvider){
         $stateProvider
             .state('me/overview', {

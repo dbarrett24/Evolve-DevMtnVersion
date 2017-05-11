@@ -18,34 +18,35 @@
         <!--*************************-->
 
 
-<div class="wrapper">
-    
-    <sidebar-dir></sidebar-dir>
+        <elite-loader></elite-loader>
+    <div class="wrapper">
+        
+        <sidebar-dir></sidebar-dir>
 
-    <div class="main-panel">
-        <top-nav-dir></top-nav-dir>
+        <div class="main-panel">
+            <top-nav-dir></top-nav-dir>
 
+            <div class="content">
+            <div class="bootstrap-datetimepicker-widget dropdown-menu top-open"></div>
+                <div class="container-fluid">
 
-        <div class="content">
-        <div class="bootstrap-datetimepicker-widget dropdown-menu top-open"></div>
-            <div class="container-fluid">
+                    <ui-view></ui-view>
 
-                <ui-view></ui-view>
-
+                </div>
             </div>
+            <!--MODAL-->
+            <new-habit-modal></new-habit-modal>
+            <edit-habit-modal></edit-habit-modal>
+            <footer-dir></footer-dir>
         </div>
-        <!--MODAL-->
-        <new-habit-modal></new-habit-modal>
-        <edit-habit-modal></edit-habit-modal>
-        <footer-dir></footer-dir>
     </div>
-</div>
 
     
     <!--ANGULAR-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
-
+    <script src="https://code.angularjs.org/1.6.4/angular-animate.js"></script>
+    
 
     <!--Bootstrap Theme-->
     <script src="https://use.fontawesome.com/b7f153b98e.js"></script>
