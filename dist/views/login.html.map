@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["login.html"],"sourcesContent":["<div>\r\n    <div id=\"particles-js\"></div>\r\n    <h1>Evolve</h1>\r\n    <a href=\"/auth\"><button>Login </button></a>\r\n    <script src=\"particles.js\"></script>\r\n</div>>"],"file":"login.html"}

@@ -14,7 +14,7 @@
     "cors": "^2.8.3",
     "del": "^2.2.2",
     "express": "^4.15.2",
-    "express-sessions": "^1.0.6",
+    "express-session": "^1.15.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cachebust": "0.0.6",
@@ -23,7 +23,9 @@
     "gulp-sass": "^2.3.2",
     "gulp-scss": "^1.4.0",
     "gulp-sourcemaps": "^2.5.1",
-    "massive": "^2.6.0"
+    "massive": "^2.6.0",
+    "passport": "^0.3.2",
+    "passport-auth0": "^0.6.0"
   },
   "description": ""
 }
