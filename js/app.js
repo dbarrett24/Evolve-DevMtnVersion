@@ -8,7 +8,11 @@ angular.module('app', ['ui.router', 'ngAnimate'])
             .state('me/overview', {
                 url: '/me/overview',
                 templateUrl: '../views/me_overview.html',
-                
+                resolve:{
+                    authenticate: function(userService){
+                        // check to see if authenticated
+                    }
+                }
             })
             .state('me/habits', {
                 url: '/me/habits',

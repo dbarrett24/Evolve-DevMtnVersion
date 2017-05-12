@@ -6,8 +6,12 @@ angular.module('app', ['ui.router', 'ngAnimate']).config(function ($stateProvide
         templateUrl: '../views/home.html'
     }).state('me/overview', {
         url: '/me/overview',
-        templateUrl: '../views/me_overview.html'
-
+        templateUrl: '../views/me_overview.html',
+        resolve: {
+            authenticate: function authenticate(userService) {
+                // check to see if authenticated
+            }
+        }
     }).state('me/habits', {
         url: '/me/habits',
         templateUrl: '../views/me_habits.html'
@@ -53,7 +57,10 @@ angular.module('app').controller('mainCtrl', function ($scope, mainService, $loc
 		$timeout(function () {
 			console.log("Habit Creation Form-data before sent to service", newhabit);
 			mainService.newHabit(newhabit, newHabitFrequency).then(function (response) {
+				console.log(response.data);
+				// $scope.habits.push(response.data.slice(0, 1));
 				$scope.getHabits();
+
 				$scope.showLoader = value;
 				swal({
 					title: 'Habit Commited!',

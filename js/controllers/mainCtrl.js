@@ -23,7 +23,10 @@ angular.module('app').controller('mainCtrl', function($scope, mainService, $loca
 			$timeout(function () {
 				console.log("Habit Creation Form-data before sent to service", newhabit);
 				mainService.newHabit(newhabit, newHabitFrequency).then(function(response){
+					console.log(response.data);
+					// $scope.habits.push(response.data.slice(0, 1));
 					$scope.getHabits();
+					
 					$scope.showLoader = value;
 					swal({
 						title: 'Habit Commited!',

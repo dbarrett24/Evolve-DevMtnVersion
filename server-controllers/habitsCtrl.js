@@ -7,7 +7,6 @@ module.exports = {
         let frequency = req.body.newHabitFrequency;
      
         db.create_habit([newHabit.title, newHabit.color, newHabit.date_created, newHabit.time_created, newHabit.reminder_time],function(err, habit_id){
-            // res.status(200).send(habits);
             if(err){
                 res.send(err);
             } else{
@@ -16,6 +15,7 @@ module.exports = {
                         res.send(err2);
                     } else{
                         res.status(200).send(response);
+                        // res.status(200).send(habit_id);
                     }
                 })       
             }
