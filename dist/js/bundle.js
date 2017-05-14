@@ -200,8 +200,6 @@ angular.module('app').service('mainService', function ($http) {
             url: '/api/editHabit',
             data: { editedHabit: editedHabit, editFrequency: editFrequency }
         }).then(function (response) {
-            // console.log(response);
-            // self.getHabits();
             return response;
         });
     };
@@ -244,30 +242,6 @@ angular.module('app').directive('newHabitModal', function () {
     return {
         restrict: "AE",
         templateUrl: '../views/directives/habits/newHabitModal.html'
-    };
-});
-'use strict';
-
-angular.module('app').directive('footerDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: './views/directives/templates/footerDir.html'
-    };
-});
-'use strict';
-
-angular.module('app').directive('sidebarDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: './views/directives/templates/sidebarDir.html'
-    };
-});
-'use strict';
-
-angular.module('app').directive('topNavDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: './views/directives/templates/topNavDir.html'
     };
 });
 'use strict';
@@ -345,6 +319,30 @@ angular.module('app').directive('timePicker', function (mainService) {
             });
         },
         controller: function controller($scope, mainService, $interval) {}
+    };
+});
+'use strict';
+
+angular.module('app').directive('footerDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: './views/directives/templates/footerDir.html'
+    };
+});
+'use strict';
+
+angular.module('app').directive('sidebarDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: './views/directives/templates/sidebarDir.html'
+    };
+});
+'use strict';
+
+angular.module('app').directive('topNavDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: './views/directives/templates/topNavDir.html'
     };
 });
 //# sourceMappingURL=bundle.js.map

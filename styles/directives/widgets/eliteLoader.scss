@@ -14,7 +14,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.85;
   z-index: 10000;
 }
 
@@ -42,11 +42,11 @@
   margin: 0 -6px;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 21.6px solid #fd7000;
+  border-bottom: 21.6px solid #07B1C6;
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
-  -webkit-filter: drop-shadow(0 0 18px #fd7000);
-          filter: drop-shadow(0 0 18px #fd7000);
+  -webkit-filter: drop-shadow(0 0 18px #07B1C6);
+          filter: drop-shadow(0 0 18px #07B1C6);
 }
 .arrow.down {
   -webkit-transform: rotate(180deg);

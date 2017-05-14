@@ -1,2 +1,8 @@
-
+//removes auth0 App header:
+.auth0-lock.auth0-lock .auth0-lock-header{
+    height: auto;
+}
+.auth0-lock-name{
+    display: none;
+}
 

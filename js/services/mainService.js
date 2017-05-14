@@ -42,8 +42,6 @@ angular.module('app').service('mainService', function($http){
             url: '/api/editHabit',
             data: {editedHabit, editFrequency}
         }).then(function(response){
-            // console.log(response);
-            // self.getHabits();
             return response;
         });
     }
