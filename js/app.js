@@ -3,16 +3,16 @@ angular.module('app', ['ui.router', 'ngAnimate'])
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: '../views/home.html'
+                templateUrl: '../views/login.html'
             })
             .state('me/overview', {
                 url: '/me/overview',
                 templateUrl: '../views/me_overview.html',
-                resolve:{
-                    authenticate: function(userService){
-                        // check to see if authenticated
-                    }
-                }
+                // resolve:{
+                //     authenticate: function(userService){
+                //         // check to see if authenticated
+                //     }
+                // }
             })
             .state('me/habits', {
                 url: '/me/habits',

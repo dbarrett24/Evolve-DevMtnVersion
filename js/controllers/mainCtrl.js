@@ -5,6 +5,11 @@ angular.module('app').controller('mainCtrl', function($scope, mainService, $loca
 	console.log($location);
 	$scope.location = $location.$$url;
 
+		mainService.getUser().then(function(response){
+			$scope.user = response;
+			console.log($scope.user);
+		})
+
 		//get All Habits
 		$scope.getHabits = function(){
 			$timeout(function(){

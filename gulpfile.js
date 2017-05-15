@@ -49,7 +49,6 @@ gulp.task('build-html', function() {
       .pipe(gulp.dest('./dist/views')); 
 });
 
-
 // gulp.task('build-bootstrap', function(){
 //     return gulp.src(['!./bootstrap/bootstrap_theme_js/bootstrap-datetimepicker.js', './bootstrap/bootstrap_theme_js/*'])
 //         .pipe(concat('bootstrap.js'))

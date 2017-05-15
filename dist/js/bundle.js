@@ -3,15 +3,10 @@
 angular.module('app', ['ui.router', 'ngAnimate']).config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
         url: '/',
-        templateUrl: '../views/home.html'
+        templateUrl: '../views/login.html'
     }).state('me/overview', {
         url: '/me/overview',
-        templateUrl: '../views/me_overview.html',
-        resolve: {
-            authenticate: function authenticate(userService) {
-                // check to see if authenticated
-            }
-        }
+        templateUrl: '../views/me_overview.html'
     }).state('me/habits', {
         url: '/me/habits',
         templateUrl: '../views/me_habits.html'
@@ -39,6 +34,11 @@ angular.module('app').controller('mainCtrl', function ($scope, mainService, $loc
 	$scope.showLoader = value;
 	console.log($location);
 	$scope.location = $location.$$url;
+
+	mainService.getUser().then(function (response) {
+		$scope.user = response;
+		console.log($scope.user);
+	});
 
 	//get All Habits
 	$scope.getHabits = function () {
@@ -211,6 +211,16 @@ angular.module('app').service('mainService', function ($http) {
             url: '/api/deleteHabit/' + id
         }).then(function (response) {
             return response;
+        });
+    };
+
+    this.getUser = function () {
+        return $http({
+            method: 'GET',
+            url: '/auth/me'
+        }).then(function (response) {
+            console.log(response);
+            return response.data;
         });
     };
 });

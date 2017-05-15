@@ -35,8 +35,6 @@ db.set_schema(function(err, data){
 });
 /////////////
 
-
-
 passport.use(new Auth0Strategy({
    domain:       config.auth0.domain,
    clientID:     config.auth0.clientID,
@@ -46,13 +44,13 @@ passport.use(new Auth0Strategy({
   function(accessToken, refreshToken, extraParams, profile, done) {
     //Find user in database
 
-    console.log(profile);
+    console.log('profile thing', profile)
     db.getUserByAuthId([profile.id], function(err, user) {
       user = user[0];
       if (!user) { //if there isn't one, we'll create one!
         console.log('CREATING USER');
-        db.createUserByAuth([profile.displayName, profile.id], function(err, user) {
-          console.log('USER CREATED', userA);
+        db.createUserByAuth([profile.displayName, profile.id, profile._json.picture_large, profile.name.givenName, profile.name.familyName], function(err, user) {
+          console.log('USER CREATED', user); //used to be userA
           return done(err, user[0]); // GOES TO SERIALIZE USER
         })
       } else { //when we find the user, return it
@@ -74,7 +72,7 @@ passport.serializeUser(function(userA, done) {
 
 //USER COMES FROM SESSION - THIS IS INVOKED FOR EVERY ENDPOINT
 passport.deserializeUser(function(userB, done) {
-  var userC = userC;
+  var userC = userB;
   //Things you might do here :
     // Query the database with the user id, get other information to put on req.user
   done(null, userC); //PUTS 'USER' ON REQ.USER
@@ -88,6 +86,16 @@ app.get('/auth/callback',
   passport.authenticate('auth0', {successRedirect: '/'}), function(req, res) {
     res.status(200).send(req.user);
 })
+
+// //redirect to auth login page
+// app.get(function(req, res, next){
+//   console.log(req.user)
+//   if (!req.user){
+//     res.redirect('/auth');
+//     return;
+//   }
+//   next();
+// })
 
 app.get('/auth/me', function(req, res) {
   if (!req.user) return res.sendStatus(404);
@@ -104,12 +112,15 @@ app.get('/auth/logout', function(req, res) {
 
 
 //ENDPOINTS
+
+//Habits
 app.get('/api/getHabits', habitsCtrl.getHabits);
 app.post('/api/createHabit', habitsCtrl.createHabit);
 app.put('/api/editHabit', habitsCtrl.editHabit);
 app.delete('/api/deleteHabit/:id', habitsCtrl.deleteHabit);
+app.put('/api/reportStreak/:id', habitsCtrl.reportStreak);
 
-
+//Users
 
 
 

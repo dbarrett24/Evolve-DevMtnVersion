@@ -61,6 +61,18 @@ module.exports = {
             }
         });
 
+    },
+
+    reportStreak: function(req, res, next){
+        let editHabit = req.body.editedHabit;
+        db.report_streak([editHabit.current_streak, editHabit.id],function(err, response){
+            if(err){
+                res.send(err);
+            } else{
+                res.status(200).send(response);    
+            }
+        });
+
     }
 
 }
