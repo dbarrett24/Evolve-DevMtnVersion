@@ -125,11 +125,6 @@ input, select {
 *, *:before, *:after {
   box-sizing: border-box; }
 
-.auth0-lock.auth0-lock .auth0-lock-header {
-  height: auto; }
-
-.auth0-lock-name {
-  display: none; }
 
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)

@@ -246,6 +246,30 @@ angular.module('app').directive('newHabitModal', function () {
 });
 'use strict';
 
+angular.module('app').directive('footerDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: './views/directives/templates/footerDir.html'
+    };
+});
+'use strict';
+
+angular.module('app').directive('sidebarDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: './views/directives/templates/sidebarDir.html'
+    };
+});
+'use strict';
+
+angular.module('app').directive('topNavDir', function () {
+    return {
+        restrict: 'E',
+        templateUrl: './views/directives/templates/topNavDir.html'
+    };
+});
+'use strict';
+
 angular.module('app').directive('colorPicker', function (mainService) {
     return {
         restrict: 'AE',
@@ -319,30 +343,6 @@ angular.module('app').directive('timePicker', function (mainService) {
             });
         },
         controller: function controller($scope, mainService, $interval) {}
-    };
-});
-'use strict';
-
-angular.module('app').directive('footerDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: './views/directives/templates/footerDir.html'
-    };
-});
-'use strict';
-
-angular.module('app').directive('sidebarDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: './views/directives/templates/sidebarDir.html'
-    };
-});
-'use strict';
-
-angular.module('app').directive('topNavDir', function () {
-    return {
-        restrict: 'E',
-        templateUrl: './views/directives/templates/topNavDir.html'
     };
 });
 //# sourceMappingURL=bundle.js.map
