@@ -12,7 +12,7 @@ var cachebust = new CacheBuster();  //need this constructor function
 
 
 gulp.task('build-css', function(){
-    return gulp.src(['./styles/**/*']) //tell gulp to get EVERYTHING inside the styles folder.
+    return gulp.src(['./styles/**/**/**/*']) //tell gulp to get EVERYTHING inside the styles folder.
         .pipe(sourcemaps.init()) //pipe (take the results from the previous thing and do something). PIPE results to sourcemaps.init() function.
         .pipe(sass()) //process SASS. Turn sass into CSS.
         // .pipe(cachebust.resources()) //Keep a copy of something and don't get the new thing. Blow up the old stuff, put in the new stuff!
