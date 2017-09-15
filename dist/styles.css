@@ -10504,7 +10504,8 @@ h2.title {
     width: 80px;
     display: block;
     font-weight: 200;
-    z-index: 3; }
+    z-index: 3;
+    background: url("./assets/img/sidebar-1.jpg"); }
     .sidebar-mini .sidebar .sidebar-wrapper {
       overflow: inherit;
       width: 80px;
@@ -14951,7 +14952,9 @@ footer {
   .sidebar .nav-mobile-menu {
     display: none; }
   .close-layer {
-    display: none; } }
+    display: none; }
+  .modal {
+    left: 105px; } }
 
 /*          Changes for small display      */
 @media (max-width: 991px) {

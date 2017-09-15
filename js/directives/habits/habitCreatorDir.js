@@ -7,6 +7,8 @@ angular.module('app').directive('habitCreatorDir', function(){
             if (document.getElementById('.progressbar').style.width == "100%"){
                 $('#habitProgress').addClass('neonGlow')
             }
+
+           
         }
     }
 });

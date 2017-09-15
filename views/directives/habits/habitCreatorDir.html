@@ -6,7 +6,7 @@
     <div class="card-content">
         <h4 class="card-title text-left">
             Habit Progress
-            <button class="btn btn-round btn-simple btn-fab btn-fab-mini pull-right" data-toggle="modal" data-target="#myModal"><i class="material-icons" style="font-size: 30px">add_circle_outline</i></button>
+            <button class="btn btn-round btn-simple btn-fab btn-fab-mini pull-right " data-toggle="modal" data-target="#myModal"><i class="material-icons" style="font-size: 30px">add_circle_outline</i></button>
             <!--<small class="pull-right">Create New</small>-->
         </h4>
 
@@ -19,7 +19,7 @@
                 <div class="col-md-11">
                     <div>
                         <p class="text-muted" style="display: inline-block">{{habit.title}}</p>
-                        <button class="btn btn-round btn-simple btn-fab btn-fab-mini" data-toggle="modal" data-target="#editHabitModal" style="height: 30px; min-width: 32px" ng-click="editModal(habit, frequency)"><i class="material-icons text-gray align-middle" style="font-size: 12px">settings</i></button>
+                        <button class="btn btn-round btn-simple btn-fab btn-fab-mini " data-toggle="modal" data-target="#editHabitModal" style="height: 30px; min-width: 32px" ng-click="editModal(habit, frequency)"><i class="material-icons text-gray align-middle" style="font-size: 12px">settings</i></button>
                     </div>
                     <div class="progress progress-line-primary progress-height" id="habitProgress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0"aria-valuemax="20" style="width: 30%" ng-style="{'background-color': habit.color}">

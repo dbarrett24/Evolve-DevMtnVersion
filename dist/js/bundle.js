@@ -7,10 +7,16 @@ angular.module('app', ['ui.router', 'ngAnimate']).config(function ($stateProvide
     }).state('me/overview', {
         url: '/me/overview',
         templateUrl: '../views/me_overview.html'
+        // resolve:{
+        //     authenticate: function(userService){
+        //         // check to see if authenticated
+        //     }
+        // }
     }).state('me/habits', {
         url: '/me/habits',
         templateUrl: '../views/me_habits.html'
 
+        // controller: 'habitsCtrl'
     });
     console.log($urlRouterProvider);
     $urlRouterProvider.otherwise('/');
