@@ -4,9 +4,9 @@ angular.module('app').directive('habitCreatorDir', function(){
         templateUrl: './views/directives/habits/habitCreatorDir.html',
         link: function(scope, elem, attrs){
 
-            if (document.getElementById('.progressbar').style.width == "100%"){
-                $('#habitProgress').addClass('neonGlow')
-            }
+            // if (document.getElementById('.progress-bar').style.width == "100%"){
+            //     $('#habitProgress').addClass('neonGlow')
+            // }
 
            
         }

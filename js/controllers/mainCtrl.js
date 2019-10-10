@@ -6,10 +6,10 @@ angular.module('app').controller('mainCtrl', function($scope, mainService, $loca
 	$scope.location = $location.$$url;
 
 
-		mainService.getUser().then(function(response){
-			$scope.user = response;
-			console.log($scope.user);
-		})
+		// mainService.getUser().then(function(response){
+		// 	$scope.user = response;
+		// 	console.log($scope.user);
+		// })
 
 		//get All Habits
 		$scope.getHabits = function(){

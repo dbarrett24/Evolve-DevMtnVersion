@@ -57,14 +57,14 @@ angular.module('app').service('mainService', function($http){
     }
 
     
-    this.getUser = function(){
-        return $http({
-            method: 'GET',
-            url: '/auth/me'
-        }).then(function(response){
-            console.log(response);
-            return response.data;
-        })
-    }
+    // this.getUser = function(){
+    //     return $http({
+    //         method: 'GET',
+    //         url: '/auth/me'
+    //     }).then(function(response){
+    //         console.log(response);
+    //         return response.data;
+    //     })
+    // }
     
 });
