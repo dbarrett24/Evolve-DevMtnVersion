@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.6.3",
     "angular-auth0": "^1.0.7",
     "angular-jwt": "^0.1.9",
-    "auth0": "^2.6.0",
+    "auth0": "^2.27.1",
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "del": "^2.2.2",
